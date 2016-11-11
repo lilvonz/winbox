@@ -72,13 +72,12 @@ function install-devtools($destination, $version)
     popd
 }
 
-function install-workstation($destination = $null, $winboxversion = 'master')
+function install-workstation($destination = "C:\Automation", $winboxversion = 'master')
 {
     $erroractionpreference = 'stop'
 
     write-host 'Configuring Windows tools for Chef Development...'
     
-    $destination = "C:\Automation"
     install-chefdk $destination 'master'
     install-devtools $destination $winboxversion
 
