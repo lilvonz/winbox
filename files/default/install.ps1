@@ -78,8 +78,8 @@ function install-workstation($destination = $null, $winboxversion = 'master')
 
     write-host 'Configuring Windows tools for Chef Development...'
 
-    install-chefdk $destination 'master'
-    install-devtools $destination $winboxversion
+    install-chefdk "$destination" 'master'
+    install-devtools "$destination" $winboxversion
 
     write-host "`nConfiguration has completed successfully.`n" -foregroundcolor green
     write-host "Ohai! Click the ChefDK icon on your Start menu to open"
